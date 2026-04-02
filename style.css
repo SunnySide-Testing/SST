@@ -72,51 +72,13 @@ header {
   flex: 1;
 }
 
-/* Logo with rotating rays */
-.logo-container {
-  position: relative;
-  width: 180px;
-  height: 180px;
-  margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
+/* Logo */
 .logo-img {
-  position: relative;
-  z-index: 2;
-  width: 140px;
-  height: 140px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   object-fit: cover;
-  filter: drop-shadow(0 0 18px rgba(76, 201, 192, 0.6));
-}
-
-.rays {
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  animation: spin 16s linear infinite;
-  z-index: 1;
-}
-
-.rays::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  background: repeating-conic-gradient(
-    from 0deg,
-    rgba(76, 201, 192, 0.55) 0deg 9deg,
-    transparent 9deg 24deg
-  );
-  mask-image: radial-gradient(circle, transparent 44%, black 50%, black 100%);
-  -webkit-mask-image: radial-gradient(circle, transparent 44%, black 50%, black 100%);
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
+  margin-bottom: 0.5rem;
 }
 
 /* Text */
