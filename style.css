@@ -31,7 +31,7 @@ body {
 .bg-gradient {
   position: fixed;
   inset: 0;
-  background: radial-gradient(ellipse at 50% -10%, rgba(255, 158, 44, 0.15) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 50% -10%, rgba(76, 201, 192, 0.12) 0%, transparent 60%);
   pointer-events: none;
   z-index: 0;
 }
@@ -72,43 +72,47 @@ header {
   flex: 1;
 }
 
-/* Sun illustration */
-.sun {
+/* Logo with rotating rays */
+.logo-container {
   position: relative;
-  width: 90px;
-  height: 90px;
+  width: 180px;
+  height: 180px;
   margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.sun::before {
-  content: '';
-  position: absolute;
-  inset: 15px;
-  background: radial-gradient(circle, var(--sun-yellow) 60%, var(--sun-orange));
+.logo-img {
+  position: relative;
+  z-index: 2;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
-  box-shadow: 0 0 40px rgba(255, 217, 90, 0.6), 0 0 80px rgba(255, 158, 44, 0.3);
+  object-fit: cover;
+  filter: drop-shadow(0 0 18px rgba(76, 201, 192, 0.6));
 }
 
 .rays {
   position: absolute;
   inset: 0;
-  animation: spin 20s linear infinite;
+  border-radius: 50%;
+  animation: spin 16s linear infinite;
+  z-index: 1;
 }
 
-.rays::before,
-.rays::after {
+.rays::before {
   content: '';
   position: absolute;
   inset: 0;
   border-radius: 50%;
-}
-
-.rays::before {
   background: repeating-conic-gradient(
     from 0deg,
-    rgba(255, 217, 90, 0.4) 0deg 10deg,
-    transparent 10deg 30deg
+    rgba(76, 201, 192, 0.55) 0deg 9deg,
+    transparent 9deg 24deg
   );
+  mask-image: radial-gradient(circle, transparent 44%, black 50%, black 100%);
+  -webkit-mask-image: radial-gradient(circle, transparent 44%, black 50%, black 100%);
 }
 
 @keyframes spin {
