@@ -171,21 +171,32 @@ h1 {
   gap: 0.75rem;
 }
 
-.links-list a {
-  display: inline-block;
-  padding: 0.5rem 1.25rem;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+.link-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 999px;
   color: var(--text-primary);
   text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 400;
-  transition: border-color 0.2s, color 0.2s;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: border-color 0.25s, color 0.25s, box-shadow 0.25s, transform 0.2s;
 }
 
-.links-list a:hover {
-  border-color: var(--sun-yellow);
-  color: var(--sun-yellow);
+.link-card:hover {
+  border-color: rgba(76, 201, 192, 0.6);
+  color: #4CC9C0;
+  box-shadow: 0 0 16px rgba(76, 201, 192, 0.2);
+  transform: translateY(-2px);
+}
+
+.link-icon {
+  width: 1.1em;
+  height: 1.1em;
+  flex-shrink: 0;
 }
 
 /* Footer */
