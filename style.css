@@ -148,10 +148,8 @@ h1 {
 
 /* Links section */
 .links {
-  position: relative;
-  z-index: 1;
   text-align: center;
-  padding: 0 2rem 2.5rem;
+  margin-top: 1.25rem;
 }
 
 .links-heading {
